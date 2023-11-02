@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-    const MyHomePage({Key? key}) : super(key: key);
+class ShopItem {
+  final String name;
+  final IconData icon;
+
+  ShopItem(this.name, this.icon);
+}
+
+class MyHomePage extends StatelessWidget {
+    MyHomePage({Key? key}) : super(key: key);
 
     final List<ShopItem> items = [
-    ShopItem("Lihat Produk", Icons.checklist),
-    ShopItem("Tambah Produk", Icons.add_shopping_cart),
-    ShopItem("Logout", Icons.logout),
+        ShopItem("Lihat Produk", Icons.checklist),
+        ShopItem("Tambah Produk", Icons.add_shopping_cart),
+        ShopItem("Logout", Icons.logout),
     ];
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -110,11 +117,4 @@ class ShopCard extends StatelessWidget {
             ),
         );
     }
-}
-
-class ShopItem {
-  final String name;
-  final IconData icon;
-
-  ShopItem(this.name, this.icon);
 }
