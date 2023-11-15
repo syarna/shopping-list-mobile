@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_list/menu.dart';
-import 'package:shopping_list/shoplist_form.dart'; // Impor halaman ShopFormPage
+import 'package:shopping_list/screens/menu.dart';
+import 'package:shopping_list/screens/shoplist_form.dart'; // Impor halaman ShopFormPage
 import 'package:shopping_list/widgets/shop_card.dart';
 import 'package:shopping_list/widgets/left_drawer.dart'; // Import the correct file
 
@@ -24,9 +24,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Shopping List',
-        ),
+        title: const Text('Shopping List'),
       ),
       drawer: const LeftDrawer(),
       body: SingleChildScrollView(
@@ -67,7 +65,7 @@ class MyHomePage extends StatelessWidget {
 class ShopCard extends StatelessWidget {
   final ShopItem item;
 
-  ShopCard(this.item);
+  const ShopCard(this.item, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +84,7 @@ class ShopCard extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ShopFormPage(),
+                builder: (context) => const ShopFormPage(),
               ),
             );
           }

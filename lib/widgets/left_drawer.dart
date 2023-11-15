@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_list/menu.dart';
-import 'package:shopping_list/shoplist_form.dart'; 
+import 'package:shopping_list/screens/menu.dart';
+import 'package:shopping_list/screens/shoplist_form.dart'; 
 // TODO: Impor halaman ShopFormPage jika sudah dibuat
 
 class LeftDrawer extends StatelessWidget {
@@ -43,7 +43,7 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MyHomePage(),
+                  builder: (context) =>MyHomePage(),
                 ),
               );
             },
@@ -54,7 +54,7 @@ class LeftDrawer extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ShopFormPage()),
+                MaterialPageRoute(builder: (context) => const ShopFormPage()),
               );
             },
           ),
